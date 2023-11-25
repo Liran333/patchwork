@@ -38,7 +38,6 @@ RUN pip install -r /home/patchwork/patchwork/requirements-prod.txt
 RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/repositories_branches_map.yaml -O /home/patchwork/patchwork/repositories_branches_map.yaml
 RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/multi_patch2pr.py -O /home/patchwork/patchwork/multi_patch2pr.py
 RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/backup_log.py -O /home/patchwork/patchwork/backup_log.py
-RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/auto_config.py -O /home/patchwork/patchwork/auto_config.py
 RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/refresh_repos.py -O /home/patchwork/patchwork/refresh_repos.py
 #COPY /home/patches/repositories_branches_map.yaml /home/patchwork/patchwork/repositories_branches_map.yaml
 #COPY tools/docker/entrypoint.sh /usr/local/bin/entrypoint.sh
