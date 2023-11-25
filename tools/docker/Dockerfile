@@ -31,7 +31,6 @@ RUN usermod -s /bin/bash patchwork && \
 
 RUN pip install wheel tox
 
-RUN mkdir -p /home/patches
 
 # we deliberately leave the requirements files in /opt so we can ping the user
 # in entrypoint.sh if they change
