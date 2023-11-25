@@ -34,7 +34,11 @@ RUN pip install wheel tox
 # we deliberately leave the requirements files in /opt so we can ping the user
 # in entrypoint.sh if they change
 RUN pip install -r /home/patchwork/patchwork/requirements-prod.txt
-
+RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/repositories_branches_map.yaml -O /home/patches/repositories_branches_map.yaml
+RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/multi_patch2pr.py -O multi_patch2pr.py
+RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/backup_log.py -O backup_log.py
+RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/auto_config.py -O auto_config.py
+RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch2pr/refresh_repos.py -O refresh_repos.py
 #COPY tools/docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 #ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 EXPOSE 8000
