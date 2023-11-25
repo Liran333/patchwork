@@ -46,4 +46,4 @@ RUN wget https://gitee.com/LeeMingRan/infrastructure_1/raw/master/ci/tools/patch
 EXPOSE 8000
 CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
 USER patchwork
-WORKDIR /home/patchwork
+WORKDIR /home/patchwork/patchwork
