@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN usermod -s /bin/bash patchwork && \
 #    usermod -g root patchwork && \
-    chown -R patchwork /hme
+    chown -R patchwork /home
 
 RUN pip install wheel tox
 
