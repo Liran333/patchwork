@@ -27,9 +27,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN usermod -s /bin/bash patchwork && \
 #    usermod -g root patchwork && \
-    chown -R patchwork /home
+    chown -R patchwork /hme
 
 RUN pip install wheel tox
+
+RUN mkdir -p /home/patches
 
 # we deliberately leave the requirements files in /opt so we can ping the user
 # in entrypoint.sh if they change
